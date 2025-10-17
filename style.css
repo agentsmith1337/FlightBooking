@@ -1,0 +1,118 @@
+* {
+    font-family: "Archivo";
+    margin: 0;
+    padding: 0; 
+}
+.header {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 2.8rem;
+}
+.nav-desktop {
+    display: none;
+}
+.nav-mobile {
+    display: flex;
+}
+.nav-extras {
+    display: flex;
+}
+.extras-item img {
+    height: 1.5rem;
+    margin: auto;
+}
+.extras-item img:hover {
+    
+}
+.extras-label {
+    display: none;
+}
+/* Greater than vertical mobiles */
+@media(min-width: 576px) {
+
+}
+/* Greater than vertical tablets */
+@media(min-width: 768px) {
+    .header {
+        display: grid;
+        height: 4rem;
+        grid-template-rows: 50% 50%;
+        padding-top: 1rem;
+        background-color: rgba(32, 151, 224, 0.25);
+    }
+    @keyframes header-hover {
+        0% {
+            background-color: rgba(32, 151, 224, 0.25);
+        }
+        25% {
+            background-color: rgba(32, 151, 224, 0.1);
+        }
+        50% {
+            background-color: aliceblue;
+            box-shadow: 0 2px 5px rgba(25, 123, 184,0.1);
+        }
+        100% {
+            background-color: aliceblue;
+            box-shadow: 0 4px 5px rgba(25, 123, 184,0.2);
+        }
+    }
+    .header:hover {
+        animation: 1s 1 normal header-hover;
+        background-color: aliceblue;
+        box-shadow: 0 4px 5px rgba(25, 123, 184,0.2);
+    }
+    .nav-mobile {
+        display: none;
+    }
+    .nav-extras {
+        display: flex;
+        grid-row : 1;
+        grid-column: 2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .nav-extras .extras-label {
+        /* padding: 0 1rem 0 0; */
+        margin: 0 1rem 0 0;
+        /* padding: 1.5em 0 1.5em 0; */
+    }
+    .nav-extras .extras-item {
+        margin: 0 0 0 1rem;
+        /* padding: 1.5em 0 1.5em 0; */
+    }
+    .nav-desktop {
+        display: flex;
+        grid-row: 2;
+        grid-column: 2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .logo img  {
+        height: 5rem;
+        margin: 1rem 0 0 1rem;
+    }
+    .extras-label {
+        display: inline;
+    }
+    .nav-extras > span:hover {
+        background-color: rgba(53, 150, 211, 0.219);
+    }
+    .nav-desktop .nav-label {
+        padding: 0 1rem 0 1rem;
+    }
+    .nav-desktop .nav-ico {
+        height: 2rem;
+    }
+}
+/* Small desktops and horizontal tablets */
+@media(min-width: 992px) {
+    .alert-mobile{
+        display: none;
+    }
+}
+/* Desktop screens */
+@media(min-width: 1024px) {
+
+}
